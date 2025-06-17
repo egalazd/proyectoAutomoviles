@@ -13,7 +13,7 @@ const sequelize = new Sequelize(POSTGRES_URI, {
 async function connectPG(){
     try{
         await sequelize.authenticate();
-        await sequelize.sync();
+        await sequelize.sync({ alter: true });
         console.log("Conectado a PG guacho!");
     } catch (error){
         console.log("Error al conectar a PG lptm", error);

@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 dotenv.config();
 
 const { connectPG } = require('./config/db.postgresql')
+const User = require('./models/user');  // IMPORTANTE importar modelo
 
 const app = express();
 app.use(express.json());
