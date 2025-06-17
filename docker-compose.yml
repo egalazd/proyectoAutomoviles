@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    image: postgres:17
+    container_name: taller-practico-final
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: vehiculos-taller
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - taller-network
+
+  
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/usr/src/app
+    container_name: api-node-taller
+    restart: on-failure
+    env_file:
+      - ./api/src/.env.docker
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    networks:
+      - taller-network
+
+volumes:
+  postgres-data:
+
+networks:
+  taller-network:
+    driver: bridge
