@@ -1,4 +1,8 @@
 -- Apuntes de instalacion
+requerimiento tener instalado
+docker docker-compose
+
+
 
 docker compose up --build
 
@@ -10,8 +14,16 @@ docker exec -it api-node-taller sh
 npx knex --knexfile knexfile.js migrate:latest
 
 
+-- para trabajar con la api localmente
 npm i express bcryptjs cors pg dotenv jsonwebtoken sequelize knex
 npm install knex
+
+o el directorio api (reconcera las dependicas configuradas en el package.json)
+sudo npm install 
+
+---
+
+
 
 cd. api
 npx knex --knexfile knexfile.js migrate:make create_users_table
