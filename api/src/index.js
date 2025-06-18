@@ -5,12 +5,13 @@ const dotenv = require('dotenv')
 dotenv.config();
 
 const { connectPG } = require('./config/db.postgresql')
-const User = require('./models/user');  // IMPORTANTE importar modelo
+const User = require('./models/user');  
+const Movies = require('./models/movies');  
 
-const app = express();
-app.use(express.json());
-app.use(cors());
-
+const app = require('./app');
+// const app = express();
+// app.use(express.json());
+// app.use(cors());
 
 (async ()=> {
 

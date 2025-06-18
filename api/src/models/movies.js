@@ -1,30 +1,34 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize, sequelize } = require('../config/db.postgresql');
 
-const User = sequelize.define('User',{
+const Movies = sequelize.define('Movies',{
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
     name: {
-        type: DataTypes.STRING(150),
-        allowNull: false,
-        field: 'nombre_usuario'
-    },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    email: {
         type: DataTypes.STRING(200),
         allowNull: false,
-        field: 'correo_electronico' // evita espacios
-    }
+        field: 'nombre_pelicula'
+    },
+    gender: {
+        type: DataTypes.STRING(100),
+        allowNull: false,
+        field: 'genero'
+    },
+    release_date: {
+        type: DataTypes.DATE,
+        field: 'fecha'
+    },
+    director: {
+        type: DataTypes.STRING(200),
+        field: 'director'
+    },
 },{
-    tableName: 'users',
+    tableName: 'movies',
     underscored: true,
     timestamps: true
 })
 
-module.exports = User;
+module.exports = Movies;
