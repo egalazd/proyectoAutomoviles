@@ -22,3 +22,6 @@ cambien el @localhost por postgres, ya que en docker
 el contenedor o host se de postgres se llama postgres
 segun lo definido en el docker-compose.yml 
 POSTGRES_URI=postgres://postgres:postgres@postgres:5432/vehiculos-taller
+
+
+ git push -u origin main
