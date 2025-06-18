@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(cors());
 
 
-
 (async ()=> {
 
     await connectPG();
