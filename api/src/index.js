@@ -9,9 +9,6 @@ const User = require('./models/user');
 const Movies = require('./models/movies');  
 
 const app = require('./app');
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
 
 (async ()=> {
 

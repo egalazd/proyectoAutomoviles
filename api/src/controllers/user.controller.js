@@ -53,6 +53,8 @@ exports.login = async (req, res) => {
 // GET /profile
 exports.profile = async (req, res) => {
   try {
+    console.log('req.user en get profile:', req.user);
+
     const user = await User.findByPk(req.user.id, {
       attributes: ['id', 'name', 'email', 'createdAt']
     });
