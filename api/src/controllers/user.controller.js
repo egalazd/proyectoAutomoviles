@@ -31,7 +31,11 @@ exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const user = await User.findOne({ where: { email } });
+    if (!email || !password) {
+      return res.status(400).json({ message: "Correo y password son requeridos" });
+    }
+
+    const user = await User.findOne({ where: { correo_electronico: email } });
     if (!user) {
       return res.status(400).json({ message: 'Correo o contraseña inválidos' });
     }

@@ -19,7 +19,7 @@ const User = sequelize.define('User',{
     email: {
         type: DataTypes.STRING(200),
         allowNull: false,
-        field: 'correo_electronico' // evita espacios
+        field: 'correo_electronico' 
     }
 },{
     tableName: 'users',
