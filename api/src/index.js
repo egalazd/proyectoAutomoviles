@@ -6,7 +6,7 @@ dotenv.config();
 
 const { connectPG } = require('./config/db.postgresql')
 const User = require('./models/user');  
-const Movies = require('./models/movies');  
+const Movie = require('./models/movie');  
 
 const app = require('./app');
 

@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { Sequelize, sequelize } = require('../config/db.postgresql');
 
-const Movies = sequelize.define('Movies',{
+const Movie = sequelize.define('Movie',{
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -26,9 +26,9 @@ const Movies = sequelize.define('Movies',{
         field: 'director'
     },
 },{
-    tableName: 'movies',
+    tableName: 'movie',
     underscored: true,
     timestamps: true
 })
 
-module.exports = Movies;
+module.exports = Movie;
