@@ -78,7 +78,7 @@ router.post('/login', UserController.login);
  * @swagger
  * /api/user/profile:
  *   get:
- *     summary: Obtiene perfil del usuario autenticado
+ *     summary: Obtiene perfil del usuario autenticado (Requiere TOKEN de usuario)
  *     tags: [Usuarios]
  *     security:
  *       - bearerAuth: []
@@ -89,6 +89,40 @@ router.post('/login', UserController.login);
  *         description: No autorizado
  */
 router.get('/profile', auth, UserController.profile);
+
+
+/**
+ * @swagger
+ * /api/user/all:
+ *   get:
+ *     summary: Lista todos los usuarios
+ *     tags: [Usuarios]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Lista de usuarios
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                     example: 1
+ *                   nombre:
+ *                     type: string
+ *                     example: Enrique Galaz
+ *                   correo_electronico:
+ *                     type: string
+ *                     example: enrique@example.com
+ *       401:
+ *         description: No autorizado
+ */
+router.get('/all', auth, UserController.getAllUsers);
+
 
 module.exports = router;
 
