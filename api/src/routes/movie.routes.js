@@ -31,17 +31,17 @@ const auth = require('../middlewares/auth');
  *             properties:
  *               name:
  *                 type: string
- *                 example: El Padrino
+ *                 example: Bastardos Sin gloria
  *               gender:
  *                 type: string
- *                 example: Drama
+ *                 example: Accion
  *               release_date:
  *                 type: string
  *                 format: date
  *                 example: 1972-03-24
  *               director:
  *                 type: string
- *                 example: Francis Ford Coppola
+ *                 example: Quentin Tarantino
  *     responses:
  *       201:
  *         description: Película creada exitosamente
@@ -77,7 +77,7 @@ router.post('/', auth, MovieController.createMovie);
  *                     example: 1
  *                   name:
  *                     type: string
- *                     example: El Padrino
+ *                     example: Bastardos sin Gloria
  *                   gender:
  *                     type: string
  *                     example: Drama
@@ -120,13 +120,16 @@ router.get('/', auth, MovieController.getAllMovies);
  *             properties:
  *               name:
  *                 type: string
+ *                 example: Bastardos CON Gloria
  *               gender:
  *                 type: string
+ *                 example: Accion
  *               release_date:
  *                 type: string
  *                 format: date
  *               director:
  *                 type: string
+ *                 example: Quentin Tarantino Sepulveda
  *     responses:
  *       200:
  *         description: Película actualizada exitosamente

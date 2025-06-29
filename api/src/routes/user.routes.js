@@ -11,6 +11,7 @@ const auth = require('../middlewares/auth');
  *   description: Endpoints de autenticación y perfil
  */
 
+
 /**
  * @swagger
  * /api/user/register:
@@ -24,22 +25,26 @@ const auth = require('../middlewares/auth');
  *           schema:
  *             type: object
  *             required:
- *               - nombre
- *               - correo
+ *               - name
+ *               - email
  *               - password
  *             properties:
- *               nombre:
+ *               name:
  *                 type: string
- *               correo:
+ *                 example: Pedro
+ *               email:
  *                 type: string
+ *                 example: pedro@gmail.com
  *               password:
  *                 type: string
+ *                 example: 123456
  *     responses:
  *       201:
  *         description: Usuario registrado exitosamente
  *       400:
  *         description: Error de validación
  */
+
 router.post('/register', UserController.register);
 
 
@@ -56,19 +61,30 @@ router.post('/register', UserController.register);
  *           schema:
  *             type: object
  *             required:
- *               - correo
+ *               - email
  *               - password
  *             properties:
- *               correo:
+ *               email:
  *                 type: string
+ *                 example: pedro@gmail.com
  *               password:
  *                 type: string
+ *                 example: 123456
  *     responses:
  *       200:
  *         description: Login exitoso, devuelve token
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 token:
+ *                   type: string
+ *                   example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
  *       401:
  *         description: Credenciales inválidas
  */
+
 router.post('/login', UserController.login);
 
 

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "El Padrino",
+    "gender": "Drama",
+    "release_date": "1972-03-24T00:00:00.000Z",
+    "director": "Francis Ford Coppola",
+    "createdAt": "2025-06-25T01:30:22.475Z",
+    "updatedAt": "2025-06-25T01:30:22.475Z"
+  },
+  {
+    "id": 4,
+    "name": "La Comunidad del Anillo",
+    "gender": "Fantasia",
+    "release_date": "1972-03-24T00:00:00.000Z",
+    "director": "JR Tolkien",
+    "createdAt": "2025-06-25T01:47:59.571Z",
+    "updatedAt": "2025-06-25T01:47:59.571Z"
+  },
+  {
+    "id": 2,
+    "name": "La Momia",
+    "gender": "accion",
+    "release_date": "2025-06-25T00:00:00.000Z",
+    "director": "Andres Perez",
+    "createdAt": "2025-06-25T01:46:33.438Z",
+    "updatedAt": "2025-06-25T01:49:04.455Z"
+  },
+  {
+    "id": 5,
+    "name": "El Padrino",
+    "gender": "Cine",
+    "release_date": "1972-03-24T00:00:00.000Z",
+    "director": "Francis Ford Coppola",
+    "createdAt": "2025-06-28T22:08:37.402Z",
+    "updatedAt": "2025-06-28T22:08:37.402Z"
+  },
+  {
+    "id": 6,
+    "name": "Star Wars: Una Nueva Esperanza",
+    "gender": "Cine",
+    "release_date": "1977-05-25T00:00:00.000Z",
+    "director": "George Lucas",
+    "createdAt": "2025-06-28T22:08:56.637Z",
+    "updatedAt": "2025-06-28T22:08:56.637Z"
+  },
+  {
+    "id": 7,
+    "name": "Gladiador",
+    "gender": "Cine",
+    "release_date": "2000-05-05T00:00:00.000Z",
+    "director": "Ridley Scott",
+    "createdAt": "2025-06-28T22:09:35.390Z",
+    "updatedAt": "2025-06-28T22:09:35.390Z"
+  }
+]

@@ -6,6 +6,10 @@ docker docker-compose
 
 docker compose up --build
 
+node api/migrations/init-db.js
+
+
+
 cd. api
 node index.js
 
